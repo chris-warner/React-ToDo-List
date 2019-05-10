@@ -16,7 +16,7 @@ class App extends React.Component {
       {
         id: 2,
         title: 'Dinner with friend',
-        completed: false
+        completed: true
       },
       {
         id: 3,
