@@ -15,20 +15,21 @@ class App extends React.Component {
       },
       {
         id: 2,
-        title: 'Take out the trash',
+        title: 'Dinner with friend',
         completed: false
       },
       {
         id: 3,
-        title: 'Take out the trash',
+        title: 'Meeting with boss',
         completed: false
       },
     ]
   }
   render() {
+    console.log(this.state.todos);
     return (
       <div className="App">
-      <Todos />
+      <Todos todos={this.state.todos} />
         </div>
     );
   }
