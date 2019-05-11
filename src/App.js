@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/layout/Header';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
-
+import uuid from 'uuid';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,17 +11,17 @@ class App extends React.Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: 'Take out the trash',
         completed: false
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: 'Dinner with friend',
         completed: false
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: 'Meeting with boss',
         completed: false
       },
@@ -45,13 +45,23 @@ return todo;
     });
   }
 
+  //Add Todo
+  addTodo = (title) => {
+    const newTodo = {
+      id: uuid.v4(),
+    title,
+    completed: false
+    }
+    this.setState({todos: [...this.state.todos, newTodo]})
+  }
+
   render() {
     console.log(this.state.todos);
     return (
       <div className="App">
       <div className="container">
       <Header />
-      <AddTodo />
+      <AddTodo addTodo={this.addTodo} />
       <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
         </div>
       </div>
