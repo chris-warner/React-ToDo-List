@@ -1,2 +1,3 @@
-React-ToDo-List
-Technologies used in this app: react, javascript.
+#React-ToDo-List
+##Technologies used in this app:
+react, javascript
