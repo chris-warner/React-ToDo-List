@@ -50,6 +50,7 @@ return todo;
     return (
       <div className="App">
       <Header />
+      <AddTodo />
       <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
         </div>
     );
