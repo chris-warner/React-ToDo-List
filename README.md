@@ -1,3 +1,5 @@
 # React-ToDo-List
 ## Technologies used in this app:
-react, javascript
+React & javascript.
+
+Test out the app live here: https://stark-beyond-72982.herokuapp.com/
